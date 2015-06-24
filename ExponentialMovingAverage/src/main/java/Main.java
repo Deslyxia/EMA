@@ -15,13 +15,13 @@ public class Main {
         TreeMap<Date, FlightData> fdMap = jsonDeserialize.getFightData();
 
 
-        System.out.println("Date       fpImp  tpImp  emaFpImp emaTpImp");
+        System.out.println("Date       tpImp   fpImp    emaTpImp  emaFpImp ");
 
         for(Date key : fdMap.keySet()){
             FlightData  fd = fdMap.get(key);
             fd.setEmaFirstPartyDiscrepancy(fpEma.average(fd.getFirstPartyDiscrepancy()));
             fd.setEmaThirdPartyDiscrepancy(tpEma.average(fd.getThirdPartyDiscrepancy()));
-            System.out.println(sdf.format(key) + "  " + fd.getFirstPartyDiscrepancy() + "   " + fd.getThirdPartyDiscrepancy()
+            System.out.println(sdf.format(key) + "  " + fd.getThirdPartyDiscrepancy() + "   " + fd.getFirstPartyDiscrepancy()
                     + "   " + fd.getEmaThirdPartyDiscrepancy() + "   " + fd.getEmaFirstPartyDiscrepancy());
 
         }
