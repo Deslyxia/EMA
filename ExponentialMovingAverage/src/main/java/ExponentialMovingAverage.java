@@ -8,10 +8,10 @@ public class ExponentialMovingAverage {
         this.alpha = alpha;
     }
 
-    public Double average(Double value) {
+    public Double average(Integer value) {
         if (oldValue == null) {
-            oldValue = value;
-            return value;
+            oldValue = value.doubleValue();
+            return value.doubleValue();
         }
         double newValue = oldValue + alpha * (value - oldValue);
         oldValue = newValue;

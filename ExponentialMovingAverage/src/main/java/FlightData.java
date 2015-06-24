@@ -1,6 +1,8 @@
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 /**
@@ -16,14 +18,21 @@ public class FlightData {
     private Float thirdPartyFlightDiscrepancy;
     private Float emaThirdPartyFlightDiscrepancy;
 
+    SimpleDateFormat sdf = new SimpleDateFormat("MM-dd-yyy");
+
     @JsonProperty("date")
     public Date getDateFact() {
         return dateFact;
     }
     @JsonProperty("date")
-    public void setDateFact(Date dateFact) {
-        this.dateFact = dateFact;
+    public void setDateFact(String date) {
+        try {
+            this.dateFact = sdf.parse(date);
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
     }
+
     @JsonProperty("impFirst")
     public Integer getFirstPartyDiscrepancy() {
         return firstPartyDiscrepancy;

@@ -30,6 +30,11 @@ public class JsonDeserialize {
             e.printStackTrace();
         }
 
+        for(FlightData fd : flightDataList){
+            requestedMap.put(fd.getDateFact(),fd);
+        }
+
+
         return requestedMap;
     }
 }
