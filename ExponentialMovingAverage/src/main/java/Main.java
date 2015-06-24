@@ -15,7 +15,7 @@ public class Main {
         TreeMap<Date, FlightData> fdMap = jsonDeserialize.getFightData();
 
 
-        System.out.println("Date       tpImp   fpImp    emaTpImp  emaFpImp ");
+        System.out.println("Date       tpImp   fpImp emaTpImp  emaFpImp ");
 
         for(Date key : fdMap.keySet()){
             FlightData  fd = fdMap.get(key);
