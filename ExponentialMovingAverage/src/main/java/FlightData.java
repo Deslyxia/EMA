@@ -15,8 +15,8 @@ public class FlightData {
     private Integer thirdPartyDiscrepancy;
     private Double emaFirstPartyDiscrepancy;
     private Double emaThirdPartyDiscrepancy;
-    private Float thirdPartyFlightDiscrepancy;
-    private Float emaThirdPartyFlightDiscrepancy;
+    private Double thirdPartyFlightDiscrepancy;
+    private Double emaThirdPartyFlightDiscrepancy;
 
     SimpleDateFormat sdf = new SimpleDateFormat("MM-dd-yyy");
 
@@ -66,19 +66,19 @@ public class FlightData {
         this.emaThirdPartyDiscrepancy = emaThirdPartyDiscrepancy;
     }
 
-    public Float getThirdPartyFlightDiscrepancy() {
+    public Double getThirdPartyFlightDiscrepancy() {
         return thirdPartyFlightDiscrepancy;
     }
 
-    public void setThirdPartyFlightDiscrepancy(Float thirdPartyFlightDiscrepancy) {
+    public void setThirdPartyFlightDiscrepancy(Double thirdPartyFlightDiscrepancy) {
         this.thirdPartyFlightDiscrepancy = thirdPartyFlightDiscrepancy;
     }
 
-    public Float getEmaThirdPartyFlightDiscrepancy() {
+    public Double getEmaThirdPartyFlightDiscrepancy() {
         return emaThirdPartyFlightDiscrepancy;
     }
 
-    public void setEmaThirdPartyFlightDiscrepancy(Float emaThirdPartyFlightDiscrepancy) {
+    public void setEmaThirdPartyFlightDiscrepancy(Double emaThirdPartyFlightDiscrepancy) {
         this.emaThirdPartyFlightDiscrepancy = emaThirdPartyFlightDiscrepancy;
     }
 }
